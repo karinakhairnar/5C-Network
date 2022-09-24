@@ -36,3 +36,19 @@ Link >p{
 .repoData{
     text-align: left;
 }
+.button{
+    background-color: rgb(4, 70, 70);
+    color: white;
+    width: 7%;
+    border-radius: 5px;
+    height: 40px;
+    font-weight: bold;
+}
+.Input{
+    width: 40%;
+    border-radius: 7px;
+    height: 40px;
+}
+.get{
+    margin-top: 40px;
+}

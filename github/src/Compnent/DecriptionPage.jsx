@@ -23,25 +23,33 @@ const DecriptionPage = () => {
 
   return (
     <div>
-      DecriptionPage
+      <div>
+        <h2>Description</h2>
+      </div>
       <div>
         {repo.length
           ? repo.map((e) => {
               return (
                 <div key={e.id} className='repo'>
-                  <div>
+                  <div className='repoData'>
                     <img className='image' src={e.owner.avatar_url} />
-                    <p>{e.name}</p>
+                    <p> Repo Name :- {e.name}</p>
                   </div>
                   <div className='repoData'>
                     <p>Description :- {e.description}</p>
                     <p>created_at :- {e.created_at}</p>
                     <p>Language :- {e.language}</p>
-                    <button>{e.followers_url}followers_url</button>
-                    <button>{e.following_url}following_url</button>
+                    <button>
+                      <Link
+                        to={`/followers/${e.owner.login}`}
+                        style={{ textDecoration: 'none' }}>
+                        {e.followers_url}followers_url
+                      </Link>
+                    </button>
                   </div>
                 </div>
               );
+              ///description/:login
             })
           : ''}
       </div>

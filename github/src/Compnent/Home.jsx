@@ -26,27 +26,37 @@ const Home = () => {
   console.log(data);
   return (
     <div>
-      <div>
-        <input value={text} onChange={(e) => setText(e.target.value)} />
-        <button onClick={handleClick}>Search</button>
+      <div className='get'>
+        <input
+          value={text}
+          className='Input'
+          placeholder='Search here by username'
+          onChange={(e) => setText(e.target.value)}
+        />
+        <button className='button' onClick={handleClick}>
+          Search
+        </button>
       </div>
       <div className='data'>
-        {data.length ? (data.map((e) => (
-          <div key={e.id}>
-            <div className='flex'>
-              <div className='gap'>
-                <img className='image' src={e.owner.avatar_url} />
+        {data.length
+          ? data.map((e) => (
+              <div key={e.id}>
+                <div className='flex'>
+                  <div className='gap'>
+                    <img className='image' src={e.owner.avatar_url} />
+                  </div>
+                  <div>
+                    <Link
+                      to={`/description/${e.owner.login}/${e.name}`}
+                      style={{ textDecoration: 'none' }}>
+                      <p>{e.name}</p>
+                    </Link>
+                  </div>
+                </div>
               </div>
-              <div>
-                <Link to={`/description/${e.owner.login}/${e.name}`} style={{textDecoration:'none'}}>
-                  <p>{e.name}</p>
-                </Link>
-              </div>
-            </div>
-          </div>
-        ))): ""}
+            ))
+          : ''}
       </div>
-      
     </div>
   );
 };
