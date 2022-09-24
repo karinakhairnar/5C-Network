@@ -43,7 +43,7 @@ const DecriptionPage = () => {
                       <Link
                         to={`/followers/${e.owner.login}`}
                         style={{ textDecoration: 'none' }}>
-                        {e.followers_url}followers
+                        {e.followers_url}Followers
                       </Link>
                     </button>
                   </div>
