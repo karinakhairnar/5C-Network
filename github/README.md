@@ -4,4 +4,4 @@
 </p>
 
 ## Deployed Link :- 
-<a href='https://5c-network-github-bc17b9.netlify.app/' target='_blank'>Nested Checkbox</a>
+<a href='https://5c-network-github-bc17b9.netlify.app/' target='_blank'>GitHub</a>
